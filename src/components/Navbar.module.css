@@ -59,3 +59,21 @@
     color: var(--background);
   }
 }
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 1rem 0;
+  }
+  .logo {
+    font-size: 1.1rem;
+  }
+  .navLinks {
+    gap: 1rem;
+  }
+  .navLinks a {
+    font-size: 0.9rem;
+  }
+  .cta {
+    padding: 0.4rem 0.8rem;
+  }
+}
