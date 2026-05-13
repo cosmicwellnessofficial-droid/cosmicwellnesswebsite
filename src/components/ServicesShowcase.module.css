@@ -1,0 +1,76 @@
+.showcase {
+  padding: 6rem 0;
+  background-color: var(--background);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--foreground);
+  opacity: 0.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-color: var(--border);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.info {
+  padding: 1.5rem;
+}
+
+.serviceName {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.serviceDesc {
+  color: var(--foreground);
+  opacity: 0.8;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,116 @@
+.hero {
+  padding: 8rem 0;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a subtle background gradient for the modern aesthetic */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100vw;
+  max-width: 800px;
+  max-height: 800px;
+  background: radial-gradient(circle, var(--primary) 0%, rgba(250, 250, 247, 0) 70%);
+  opacity: 0.15;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(60px);
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.content {
+  max-width: 800px;
+}
+
+.title {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+}
+
+.highlight {
+  color: var(--primary);
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.35rem);
+  line-height: 1.6;
+  color: var(--foreground);
+  opacity: 0.8;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.primaryBtn, .secondaryBtn {
+  padding: 1rem 2rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all 0.2s ease;
+}
+
+.primaryBtn {
+  background-color: var(--foreground);
+  color: var(--background);
+  box-shadow: var(--shadow-md);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+.secondaryBtn:hover {
+  background-color: var(--surface);
+  border-color: var(--foreground);
+}
+
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero::before {
+    background: radial-gradient(circle, var(--primary) 0%, rgba(26, 30, 35, 0) 70%);
+    opacity: 0.08;
+  }
+}
