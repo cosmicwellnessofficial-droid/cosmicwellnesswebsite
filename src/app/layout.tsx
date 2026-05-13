@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Modern Minimalist Product",
-  description: "A beautiful showcase for our premium product.",
+  title: "CosmicWellness",
+  description: "Heal naturally, Heal better.",
 };
 
 export default function RootLayout({
